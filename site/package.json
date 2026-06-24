@@ -1,0 +1,21 @@
+{
+  "name": "projectmoon-book-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run prepare:content && astro dev --host 0.0.0.0",
+    "build": "npm run prepare:content && astro build",
+    "check:links": "node ./scripts/check-internal-links.mjs",
+    "preview": "astro preview --host 0.0.0.0",
+    "prepare:content": "node ./scripts/prepare-content.mjs"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.39.0",
+    "astro": "^6.4.8",
+    "yaml": "^2.8.1"
+  },
+  "overrides": {
+    "vite": "^7.0.0"
+  }
+}

@@ -1,0 +1,79 @@
+---
+import EditLink from 'virtual:starlight/components/EditLink';
+import LastUpdated from 'virtual:starlight/components/LastUpdated';
+import Pagination from 'virtual:starlight/components/Pagination';
+---
+
+<footer class="sl-flex project-footer">
+  <div class="meta sl-flex">
+    <EditLink />
+    <LastUpdated />
+  </div>
+  <Pagination />
+
+  <div class="project-footer-info" aria-label="站点信息">
+    <p>Project Moon 事件志</p>
+    <nav aria-label="项目链接">
+      <a href="https://projectmoon.xiaowumin.cn/">网站</a>
+      <a href="https://github.com/xiaowumin-mark/ProjectMoon">GitHub</a>
+      <a href="https://github.com/xiaowumin-mark/">作者</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  @layer starlight.core {
+    .project-footer {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .meta {
+      gap: 0.75rem 3rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      font-size: var(--sl-text-sm);
+      color: var(--sl-color-gray-3);
+    }
+
+    .meta > :global(p:only-child) {
+      margin-inline-start: auto;
+    }
+
+    .project-footer-info {
+      display: flex;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--sl-color-gray-6);
+      padding-block: 1.25rem;
+      font-size: var(--sl-text-sm);
+      color: var(--sl-color-gray-3);
+    }
+
+    .project-footer-info p {
+      margin: 0;
+      font-weight: 600;
+      color: var(--sl-color-gray-2);
+    }
+
+    .project-footer-info nav {
+      display: flex;
+      gap: 0.75rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .project-footer-info a {
+      color: var(--sl-color-gray-2);
+      text-decoration-color: var(--sl-color-gray-5);
+      text-underline-offset: 0.2em;
+    }
+
+    .project-footer-info a:hover {
+      color: var(--sl-color-white);
+      text-decoration-color: currentColor;
+    }
+  }
+</style>
