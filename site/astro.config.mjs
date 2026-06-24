@@ -13,6 +13,9 @@ export default defineConfig({
       title: 'Project Moon 事件志',
       description: '一部面向中文读者的 Project Moon 世界事件、人物与组织编年读本。',
       customCss: ['./src/styles/custom.css'],
+      components: {
+        Footer: './src/components/Footer.astro',
+      },
       defaultLocale: 'root',
       locales: {
         root: {
